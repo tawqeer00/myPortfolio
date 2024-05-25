@@ -2,6 +2,11 @@
 import { Container, Row, Col } from "react-bootstrap";
 import tawqeer from "../assets/img/tawqeer.jpeg";
 //import { ArrowRightCircle } from 'react-bootstrap-icons';
+import { Bio } from '../components/data/constants';
+import { HashLink } from 'react-router-hash-link';
+import {
+  BrowserRouter as Router
+} from "react-router-dom";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -58,7 +63,10 @@ export const Banner = () => {
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi! I'm Tawqeer, A`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Programmer", "Full Stack Developer", "Web Designer" ]'><span className="wrap"></span></span></h1>
                   <p> "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things."</p>
-                  <button className="vvd"><span>Check Resume</span> </button>
+                   <Router> <HashLink to={Bio.resume}>
+                <button className="vvd"><span>Check Resume</span></button>
+                  </HashLink>                  
+                 </Router>
                  
               </div>}
             </TrackVisibility>
